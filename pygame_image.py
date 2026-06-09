@@ -10,12 +10,14 @@ def main():
     screen = pg.display.set_mode((800, 600)) #サイズ
     clock  = pg.time.Clock()
     bg_img = pg.image.load("fig/pg_bg.jpg") #画像読み込み　画像Surfaceの生成
+    kk_img = pg.image.load("fig/3.png") #練習3；こうかとんSurfaceの作成
     tmr = 0
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
 
         screen.blit(bg_img, [0, 0]) #作られたscreenのsurfaceの座標 0,0に貼り付け　貼り付けないと見えない。
+        screen.blit(kk_img, [300, 200])        #練習4:こうかとんsurfaceの表示
         pg.display.update()
         tmr += 1        
         clock.tick(10)
