@@ -16,12 +16,13 @@ def main():
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
-
-        screen.blit(bg_img, [0, 0]) #作られたscreenのsurfaceの座標 0,0に貼り付け　貼り付けないと見えない。
+        x = tmr
+        screen.blit(bg_img, [-x, 0]) #作られたscreenのsurfaceの座標 0,0に貼り付け　貼り付けないと見えない。
         screen.blit(kk_img, [300, 200])        #練習4:こうかとんsurfaceの表示
         pg.display.update()
-        tmr += 1        
-        clock.tick(10)
+        tmr += 1
+                
+        clock.tick(200)
 
 
 if __name__ == "__main__":
