@@ -11,6 +11,7 @@ def main():
     clock  = pg.time.Clock()
     bg_img = pg.image.load("fig/pg_bg.jpg") #画像読み込み　画像Surfaceの生成
     kk_img = pg.image.load("fig/3.png") #練習3；こうかとんSurfaceの作成
+    kk_img = pg.transform.folip(kk_img, True , False) #練習３こうかとん左右反転
     tmr = 0
     while True:
         for event in pg.event.get():
