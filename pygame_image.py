@@ -23,14 +23,16 @@ def main():
         
         key_lst = pg.key.get_pressed() # 練習10-3 すべてのキーの押した状態の取得
         # print(key_lst)
+        y = 0
         if key_lst[pg.K_UP]: #上矢印キーが押されたら
-             kk_rct.move_ip(0,-1)
-        if key_lst[pg.K_DOWN]: 
-             kk_rct.move_ip(0,1)     
+            y=-1
+        if key_lst[pg.K_DOWN]:
+            y = 1      
         if not key_lst[pg.K_RIGHT]: 
-             kk_rct.move_ip(-1,0)
+            rl = -1
         if key_lst[pg.K_RIGHT]: 
-             kk_rct.move_ip(1,0) 
+            rl =  1
+        kk_rct.move_ip(rl,y) 
             
         x = tmr %3200  
         
